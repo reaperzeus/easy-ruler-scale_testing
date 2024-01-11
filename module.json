@@ -9,13 +9,25 @@
   "compatibleCoreVersion": "11",
   "authors": [
     {
-        "name": "enso",
-        "discord": "enso#0361"
+      "name": "enso",
+      "discord": "enso#0361"
     }
-],
-"esmodules": [
+  ],
+  "esmodules": [
     "/scripts/rulerScale.js"
   ],
+  "relationships": {
+    "requires": [
+        {
+            "id": "lib-wrapper",
+            "type": "module",
+            "compatibility": {
+                "minimum": "1",
+                "verified": "1.12.13.0"
+            }
+        }
+    ]
+},
   "url": "",
   "manifest": "",
   "download": ""
