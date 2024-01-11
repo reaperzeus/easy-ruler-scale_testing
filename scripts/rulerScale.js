@@ -50,7 +50,8 @@ function _newDrawMeasuredPath() {
 
 function dragRuler_newDrawMeasuredPath() {
   if (!this.isDragRuler) {
-    return this.super._drawMeasuredPath();
+    // return this.super._drawMeasuredPath();
+    return _newDrawMeasuredPath.call(this);
   }
   let rulerColor = this.color;
   if (!this.dragRulerGridSpaces || canvas.grid.type === CONST.GRID_TYPES.GRIDLESS) {
