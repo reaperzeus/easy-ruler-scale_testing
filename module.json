@@ -1,23 +1,22 @@
 {
-  "name": "easy-ruler-scale",
+  "id": "easy-ruler-scale",
   "title": "Easy Ruler Scale",
   "description": "",
-  "version": "This is auto replaced",
+  "version": "2.0.0",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "11",
   "authors": [
     {
-      "name": "Kandashi",
-      "url": "https://github.com/Kandashi",
-      "discord": "Kandashi (He/Him)#6698"
+        "name": "enso",
+        "discord": "enso#0361"
     }
-  ],
-  "esmodules": [
+],
+"esmodules": [
     "/scripts/rulerScale.js"
   ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced"
+  "url": "",
+  "manifest": "",
+  "download": ""
 }
