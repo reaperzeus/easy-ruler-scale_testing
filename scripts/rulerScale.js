@@ -11,7 +11,7 @@ Hooks.on("init", () => {
 const ERS = "easy-ruler-scale"
 Hooks.once('init', async function () {
   libWrapper.register(ERS, "Ruler.prototype._drawMeasuredPath", _newDrawMeasuredPath, "OVERRIDE")
-  libWrapper.register(ERS, "CONFIG.Canvas.rulerClass.prototype._drawMeasuredPath", dragRuler_newDrawMeasuredPath, "OVERRIDE");
+  if (game.modules.get('drag-ruler')?.active) libWrapper.register(ERS, "CONFIG.Canvas.rulerClass.prototype._drawMeasuredPath", dragRuler_newDrawMeasuredPath, "OVERRIDE");
 });
 
 function _newDrawMeasuredPath() {
@@ -50,7 +50,7 @@ function _newDrawMeasuredPath() {
 
 function dragRuler_newDrawMeasuredPath() {
   if (!this.isDragRuler) {
-    return super._drawMeasuredPath();
+    return this.super._drawMeasuredPath();
   }
   let rulerColor = this.color;
   if (!this.dragRulerGridSpaces || canvas.grid.type === CONST.GRID_TYPES.GRIDLESS) {
