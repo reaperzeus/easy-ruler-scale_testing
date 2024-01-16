@@ -7,6 +7,10 @@
   "manifestPlusVersion": "1.0.0",
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "11",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+},
   "authors": [
     {
       "name": "enso",
