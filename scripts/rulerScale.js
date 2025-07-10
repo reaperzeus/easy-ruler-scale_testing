@@ -10,7 +10,7 @@ Hooks.on("init", () => {
 
 const ERS = "easy-ruler-scale"
 Hooks.once('init', async function () {
-  libWrapper.register(ERS, "Ruler.prototype._drawMeasuredPath", _newDrawMeasuredPath, "OVERRIDE")
+  libWrapper.register(ERS, "foundry.canvas.interaction.Ruler.prototype._drawMeasuredPath", _newDrawMeasuredPath, "OVERRIDE")
   if (game.modules.get('drag-ruler')?.active) libWrapper.register(ERS, "CONFIG.Canvas.rulerClass.prototype._drawMeasuredPath", dragRuler_newDrawMeasuredPath, "OVERRIDE");
 });
 
