@@ -1,5 +1,5 @@
 Hooks.on("init", () => {
-  game.settings.register("easy-ruler-scale", "scaling", {
+  game.settings.register("easy-ruler-scale-testing", "scaling", {
     name: "Ruler Scale",
     scope: "client",
     config: true,
@@ -8,7 +8,7 @@ Hooks.on("init", () => {
   });
 })
 
-const ERS = "easy-ruler-scale"
+const ERS = "easy-ruler-scale-testing"
 Hooks.once('init', async function () {
   libWrapper.register(ERS, "foundry.canvas.interaction.Ruler.prototype._drawMeasuredPath", _newDrawMeasuredPath, "OVERRIDE")
   if (game.modules.get('drag-ruler')?.active) libWrapper.register(ERS, "CONFIG.Canvas.rulerClass.prototype._drawMeasuredPath", dragRuler_newDrawMeasuredPath, "OVERRIDE");
@@ -83,7 +83,7 @@ function dragRuler_newDrawMeasuredPath() {
       label.visible = true;
       let labelPosition = ray.project((ray.distance + 50) / ray.distance);
       label.position.set(labelPosition.x, labelPosition.y);
-      let scale = game.settings.get("easy-ruler-scale", "scaling")
+      let scale = game.settings.get("easy-ruler-scale-testing", "scaling")
       let gs = (canvas.scene.dimensions.size / 100)
       let zs = 1 / canvas.stage.scale.x
       label.transform.scale.set((gs + zs) * (scale / 100))
